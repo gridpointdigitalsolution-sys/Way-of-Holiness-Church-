@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact The Way of Holiness Church — Mind of Christ Ministry. Plan your visit, submit a prayer request, get directions, or reach our team.">
+  <meta name="theme-color" content="#060C1A">
+  <title>Contact Us | The Way of Holiness Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .prayer-section { background: var(--navy-mid); }
+    .prayer-inner {
+      max-width: 760px; margin: 0 auto; text-align: center;
+    }
+    .prayer-form {
+      margin-top: 2.5rem; text-align: left;
+    }
+    .give-section { background: var(--navy-void); }
+    .give-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: var(--gap);
+      align-items: center;
+    }
+    .give-amounts {
+      display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1.5rem 0;
+    }
+    .give-amount {
+      padding: 0.65rem 1.4rem;
+      border: 1px solid var(--glass-border); border-radius: var(--radius-sm);
+      font-size: 0.88rem; color: var(--text-muted); cursor: pointer;
+      transition: all var(--dur-fast); font-weight: 400;
+      background: transparent;
+    }
+    .give-amount:hover, .give-amount.selected {
+      border-color: var(--gold-primary); color: var(--gold-primary);
+      background: var(--gold-subtle);
+    }
+    .give-img {
+      aspect-ratio: 1; border-radius: var(--radius-md);
+      overflow: hidden; position: relative;
+      background: linear-gradient(135deg, var(--navy-card), var(--navy-void));
+      border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .give-img-inner {
+      text-align: center; opacity: 0.3;
+      display: flex; flex-direction: column; align-items: center; gap: 1rem;
+    }
+    .give-img-inner span { font-size: 5rem; }
+    .give-img-inner p { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-primary); }
+    .give-scripture {
+      font-family: var(--font-display); font-style: italic;
+      font-size: 1.2rem; color: var(--cream); line-height: 1.6;
+      margin: 1.5rem 0; padding: 1.5rem;
+      border-left: 2px solid var(--gold-primary);
+      background: var(--gold-trace);
+    }
+    .visit-cards {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: var(--gap);
+      margin-top: 3rem;
+    }
+    .visit-card {
+      background: var(--glass-bg); border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md); padding: 2.5rem 2rem; text-align: center;
+      backdrop-filter: var(--glass-blur); -webkit-backdrop-filter: var(--glass-blur);
+      position: relative;
+    }
+    .visit-card::before {
+      content:''; position:absolute;top:0;left:50%;transform:translateX(-50%);
+      width:50%;height:2px;
+      background:linear-gradient(to right,transparent,var(--gold-primary),transparent);
+    }
+    .visit-card__icon { font-size:2rem;margin-bottom:1rem;display:block; }
+    .visit-card h3 {
+      font-family:var(--font-display);font-size:1.3rem;font-weight:500;
+      color:var(--cream);margin-bottom:0.75rem;
+    }
+    .visit-card p { font-size:0.9rem;color:var(--text-muted);line-height:1.8;font-weight:300; }
+    @media(max-width:768px) {
+      .give-grid { grid-template-columns:1fr; }
+      .visit-cards { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></div>
+    <div class="loader__ring"></div>
+    <p class="loader__wordmark">Way of Holiness</p>
+  </div>
+
+  <div class="ticker" aria-label="Service times">
+    <div class="ticker__track">
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Sunday Worship: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Wednesday Bible Study: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Friday Prayer Night: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> We'd Love to Meet You — Come This Sunday!</span>
+    </div>
+  </div>
+
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Way of Holiness Church — Home">
+        <span class="nav__logo-mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-script">Way of Holiness</span>
+          <span class="nav__logo-sub">Mind of Christ Ministry</span>
+        </span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
+        <li><a href="programs.html" class="nav__link">Programs</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="#contact-form" class="btn btn--gold-outline" style="padding:0.6rem 1.4rem;font-size:0.72rem;">Write Us</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu__rays" aria-hidden="true"></div>
+    <ul class="mobile-menu__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="#contact-form" class="btn btn--gold">Send Us a Message</a>
+    <p class="mobile-menu__scripture">"Call to me and I will answer you and tell you great and unsearchable things." — Jer 33:3</p>
+  </div>
+
+  <main>
+
+    <!-- ── PAGE HERO ──────────────────────────────────────────── -->
+    <section class="page-hero" aria-label="Contact page header">
+      <div class="page-hero__rays" aria-hidden="true"></div>
+      <div class="page-hero__content">
+        <div class="page-hero__crest"><img src="images/logo.jpg" alt="Church Crest"></div>
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>›</span><span aria-current="page">Contact</span>
+        </nav>
+        <h1 class="page-hero__title">Get in Touch</h1>
+        <p class="page-hero__subtitle">We would love to hear from you — every message, every question, every prayer request matters to us.</p>
+        <div class="page-hero__line" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ── CONTACT SECTION ───────────────────────────────────── -->
+    <section class="contact-section section" id="contact-form" aria-label="Contact information and form">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Contact Cards -->
+          <div class="contact-info" data-reveal="left">
+            <div class="gold-sep" style="margin-bottom:1.5rem;">
+              <div class="gold-sep__line"></div>
+              <span class="gold-sep__dot">✦</span>
+            </div>
+            <span class="section-label t-label" style="display:block;margin-bottom:1rem;">Reach Us Directly</span>
+            <h2 class="section-heading" style="font-size:clamp(2rem,3.5vw,3rem);margin-bottom:0.5rem;">
+              We Are Here<br><em>For You</em>
+            </h2>
+            <p class="section-text" style="margin-bottom:2rem;">
+              Whether you have questions, need prayer, want to connect with a ministry, or are planning your first visit — our team is ready to welcome you with open arms.
+            </p>
+
+            <article class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">📍</div>
+              <div>
+                <p class="contact-card__title">Our Location</p>
+                <p class="contact-card__content">[Church Street Address]<br>[City, State / Province]<br>[Country, Postal Code]</p>
+                <p class="contact-card__sub">Free parking available on premises</p>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">📞</div>
+              <div>
+                <p class="contact-card__title">Phone</p>
+                <p class="contact-card__content">[Primary Phone Number]</p>
+                <p class="contact-card__sub">Available Monday – Friday, 9:00 AM – 5:00 PM</p>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">✉</div>
+              <div>
+                <p class="contact-card__title">Email</p>
+                <p class="contact-card__content">[Church Email Address]</p>
+                <p class="contact-card__sub">We respond within 24–48 business hours</p>
+              </div>
+            </article>
+
+            <article class="contact-card">
+              <div class="contact-card__icon" aria-hidden="true">🕐</div>
+              <div>
+                <p class="contact-card__title">Office Hours</p>
+                <p class="contact-card__content">Monday – Friday: 9:00 AM – 5:00 PM</p>
+                <p class="contact-card__sub">Closed Saturdays &bull; Sundays: Ministry only</p>
+              </div>
+            </article>
+
+            <!-- Social Links -->
+            <div style="margin-top:1.5rem;">
+              <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-primary);margin-bottom:1rem;font-weight:500;">Follow Us</p>
+              <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                <a href="#" class="footer__social-link" aria-label="Facebook" style="border-radius:var(--radius-sm);width:auto;padding:0.6rem 1rem;gap:0.5rem;display:flex;align-items:center;font-size:0.78rem;color:var(--text-muted);">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  Facebook
+                </a>
+                <a href="#" class="footer__social-link" aria-label="YouTube" style="border-radius:var(--radius-sm);width:auto;padding:0.6rem 1rem;gap:0.5rem;display:flex;align-items:center;font-size:0.78rem;color:var(--text-muted);">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/></svg>
+                  YouTube
+                </a>
+                <a href="#" class="footer__social-link" aria-label="WhatsApp" style="border-radius:var(--radius-sm);width:auto;padding:0.6rem 1rem;gap:0.5rem;display:flex;align-items:center;font-size:0.78rem;color:var(--text-muted);">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap" data-reveal="right" data-delay="100">
+            <h2 class="contact-form-title">Send Us a Message</h2>
+            <p class="contact-form-subtitle">Fill in your details below and our team will get back to you shortly.</p>
+
+            <form id="contactForm" novalidate aria-label="Contact form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="firstName">First Name *</label>
+                  <input class="form-input" type="text" id="firstName" name="firstName" placeholder="Your first name" required autocomplete="given-name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="lastName">Last Name *</label>
+                  <input class="form-input" type="text" id="lastName" name="lastName" placeholder="Your last name" required autocomplete="family-name">
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="email">Email Address *</label>
+                  <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="phone">Phone Number</label>
+                  <input class="form-input" type="tel" id="phone" name="phone" placeholder="+1 (000) 000-0000" autocomplete="tel">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="subject">Subject *</label>
+                <select class="form-input" id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject…</option>
+                  <option value="visit">Planning a Visit</option>
+                  <option value="prayer">Prayer Request</option>
+                  <option value="ministry">Ministry Enquiry</option>
+                  <option value="counselling">Pastoral Counselling</option>
+                  <option value="giving">Giving &amp; Donations</option>
+                  <option value="general">General Enquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Your Message *</label>
+                <textarea class="form-input" id="message" name="message" placeholder="Share your question, request or message with us…" required rows="5"></textarea>
+              </div>
+              <div class="form-group" style="display:flex;align-items:flex-start;gap:0.75rem;">
+                <input type="checkbox" id="newsletter" name="newsletter" style="margin-top:3px;accent-color:var(--gold-primary);">
+                <label for="newsletter" style="font-size:0.85rem;color:var(--text-muted);cursor:pointer;font-weight:300;line-height:1.6;">
+                  I'd like to receive updates, newsletters, and event notifications from Way of Holiness Church.
+                </label>
+              </div>
+              <button type="submit" class="btn btn--gold" style="width:100%;justify-content:center;padding:1rem 2rem;font-size:0.85rem;">
+                Send Message &#8594;
+              </button>
+            </form>
+
+            <div class="form-success" id="formSuccess" role="status" aria-live="polite">
+              <div style="font-size:3rem;margin-bottom:1rem;" aria-hidden="true">✦</div>
+              <p style="font-family:var(--font-display);font-size:1.8rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem;">Message Received!</p>
+              <p style="font-size:0.95rem;color:var(--text-muted);font-weight:300;line-height:1.8;">
+                Thank you for reaching out. Our team will respond within 24–48 hours.<br>
+                In the meantime, we're praying for you. You are welcome here.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MAP / LOCATION ────────────────────────────────────── -->
+    <section class="map-section section section--dark" id="location" aria-label="Church location">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label t-label">Find Us</span>
+          <h2 class="section-heading">Our Location</h2>
+        </div>
+        <div class="map-frame" data-reveal data-delay="150">
+          <!-- Replace this div with an actual <iframe> from Google Maps when ready -->
+          <div class="map-placeholder">
+            <div class="map-placeholder__icon" aria-hidden="true">📍</div>
+            <p class="map-placeholder__text">[Church Address]<br>[City, State / Province, Country]</p>
+            <p class="map-placeholder__label">Interactive map will load here</p>
+            <a href="#" class="btn btn--gold-outline" style="margin-top:1rem;">Get Directions on Google Maps</a>
+          </div>
+          <!-- Example Google Maps embed (replace src with actual embed URL):
+          <iframe
+            src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
+            width="100%" height="100%" style="border:0;"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Way of Holiness Church location on map">
+          </iframe>
+          -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PLAN YOUR VISIT ───────────────────────────────────── -->
+    <section class="section section--card" id="plan-visit" aria-label="Plan your visit">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label t-label">First Time Visiting?</span>
+          <h2 class="section-heading">Plan Your First Visit</h2>
+          <p style="color:var(--text-muted);font-size:1rem;font-weight:300;margin-top:1rem;max-width:55ch;margin-left:auto;margin-right:auto;">
+            We want your first experience to be everything God intended — comfortable, welcoming, and life-changing. Here's what to expect.
+          </p>
+        </div>
+        <div class="visit-cards">
+          <div class="visit-card" data-reveal data-delay="0">
+            <span class="visit-card__icon" aria-hidden="true">🚗</span>
+            <h3>Getting Here</h3>
+            <p>We are conveniently located at [Church Address]. Free parking is available on the church premises and on surrounding streets. Public transport routes also serve our location.</p>
+          </div>
+          <div class="visit-card" data-reveal data-delay="120">
+            <span class="visit-card__icon" aria-hidden="true">👋</span>
+            <h3>What to Expect</h3>
+            <p>Arrive a few minutes early and our friendly welcome team will greet you. Services typically run 90–120 minutes and include anointed worship, powerful preaching, and a warm, Spirit-filled atmosphere. Come as you are.</p>
+          </div>
+          <div class="visit-card" data-reveal data-delay="240">
+            <span class="visit-card__icon" aria-hidden="true">👶</span>
+            <h3>Families &amp; Children</h3>
+            <p>Families are our heartbeat. Children's Church runs during Sunday service for ages 4–12. A clean, safe, and Spirit-filled environment for your little ones to encounter God in a way tailored for them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PRAYER REQUEST ────────────────────────────────────── -->
+    <section class="prayer-section section" id="prayer" aria-label="Submit a prayer request">
+      <div class="container">
+        <div class="prayer-inner" data-reveal>
+          <div class="gold-sep" style="justify-content:center;margin-bottom:1.5rem;">
+            <div class="gold-sep__line"></div>
+            <span class="gold-sep__dot">✦</span>
+            <div class="gold-sep__line" style="transform:scaleX(-1);"></div>
+          </div>
+          <span class="section-label t-label" style="display:block;margin-bottom:1rem;">We Pray. God Answers.</span>
+          <h2 class="section-heading" style="margin-bottom:1rem;">Submit a Prayer Request</h2>
+          <p class="section-text" style="margin:0 auto 2rem;">
+            You do not have to carry your burden alone. Our prayer team intercedes over every single prayer request submitted — with faith, confidentiality, and genuine love. Nothing is too big or too small for God.
+          </p>
+          <form id="prayerForm" class="prayer-form" novalidate aria-label="Prayer request form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="prayerName">Your Name *</label>
+                <input class="form-input" type="text" id="prayerName" name="prayerName" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="prayerEmail">Email Address</label>
+                <input class="form-input" type="email" id="prayerEmail" name="prayerEmail" placeholder="your@email.com">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="prayerRequest">Your Prayer Request *</label>
+              <textarea class="form-input" id="prayerRequest" name="prayerRequest" rows="5" placeholder="Share your prayer request with us. All requests are kept strictly confidential." required></textarea>
+            </div>
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:0.75rem;">
+              <input type="checkbox" id="anonymous" name="anonymous" style="margin-top:3px;accent-color:var(--gold-primary);">
+              <label for="anonymous" style="font-size:0.85rem;color:var(--text-muted);cursor:pointer;font-weight:300;line-height:1.6;">Keep my prayer request anonymous</label>
+            </div>
+            <button type="submit" class="btn btn--gold-outline" style="width:100%;justify-content:center;">
+              Submit Prayer Request &#8594;
+            </button>
+          </form>
+          <p style="font-family:var(--font-display);font-style:italic;font-size:1rem;color:var(--text-faint);margin-top:2rem;line-height:1.7;">
+            "The prayer of a righteous person is powerful and effective." — James 5:16
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── GIVING ─────────────────────────────────────────────── -->
+    <section class="give-section section" id="give" aria-label="Give online">
+      <div class="container">
+        <div class="give-grid">
+          <div data-reveal="left">
+            <div class="gold-sep" style="margin-bottom:1.5rem;">
+              <div class="gold-sep__line"></div>
+              <span class="gold-sep__dot">✦</span>
+            </div>
+            <span class="section-label t-label" style="display:block;margin-bottom:1rem;">Give Generously</span>
+            <h2 class="section-heading" style="margin-bottom:1rem;">
+              Sow into God's<br><em>Kingdom Work</em>
+            </h2>
+            <p class="section-text">
+              Every seed you sow into the Way of Holiness Church fuels the advancement of God's Kingdom — souls reached, lives transformed, ministries equipped, and communities served. Your giving is an act of worship and a declaration of faith.
+            </p>
+            <blockquote class="give-scripture">
+              "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver." — 2 Corinthians 9:7
+            </blockquote>
+            <div style="margin-bottom:1.5rem;">
+              <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.75rem;font-weight:500;">Select a Gift Amount</p>
+              <div class="give-amounts" id="giveAmounts">
+                <button class="give-amount" data-amount="10" type="button">$10</button>
+                <button class="give-amount" data-amount="25" type="button">$25</button>
+                <button class="give-amount" data-amount="50" type="button">$50</button>
+                <button class="give-amount" data-amount="100" type="button">$100</button>
+                <button class="give-amount" data-amount="custom" type="button">Custom</button>
+              </div>
+            </div>
+            <a href="#" class="btn btn--gold" style="width:100%;justify-content:center;">Give Online Securely &#8594;</a>
+            <p style="font-size:0.75rem;color:var(--text-faint);margin-top:1rem;text-align:center;">
+              🔒 Secure &amp; encrypted. All donations are tax-deductible where applicable.
+            </p>
+          </div>
+          <div class="give-img" data-reveal="right" data-delay="150">
+            <div class="give-img-inner">
+              <span aria-hidden="true">🙏</span>
+              <p>Partner with Us in Ministry</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <span class="footer__logo-mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></span>
+            <div>
+              <p class="footer__logo-script">Way of Holiness</p>
+              <p class="footer__logo-sub">Mind of Christ Ministry</p>
+            </div>
+          </div>
+          <p class="footer__tagline">Walking in holiness. Thinking with the mind of Christ. Transforming lives and nations through the power of the Gospel.</p>
+          <nav class="footer__social" aria-label="Social media">
+            <a href="#" class="footer__social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/></svg></a>
+            <a href="#" class="footer__social-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </nav>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Service Schedule</h4>
+          <div class="footer__time-row"><span class="footer__time-day">Sunday</span><span class="footer__time-val">[Service Time]</span></div>
+          <div class="footer__time-row"><span class="footer__time-day">Wednesday</span><span class="footer__time-val">[Service Time]</span></div>
+          <div class="footer__time-row"><span class="footer__time-day">Friday</span><span class="footer__time-val">[Service Time]</span></div>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact Us</h4>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="footer__contact-item"><span class="footer__contact-icon">📍</span><span>[Church Address]</span></div>
+            <div class="footer__contact-item"><span class="footer__contact-icon">📞</span><span>[Phone Number]</span></div>
+            <div class="footer__contact-item"><span class="footer__contact-icon">✉</span><span>[Email Address]</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 The Way of Holiness Church &mdash; Mind of Christ Ministry. All rights reserved.</p>
+        <p class="footer__bottom-verse">"Call to me and I will answer you." &mdash; Jeremiah 33:3</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">&#8593;</button>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Give amount selector */
+    document.querySelectorAll('.give-amount').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.give-amount').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      });
+    });
+
+    /* Prayer form handler */
+    const prayerForm = document.getElementById('prayerForm');
+    if (prayerForm) {
+      prayerForm.addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = prayerForm.querySelector('[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = 'Submitting…';
+        setTimeout(() => {
+          prayerForm.innerHTML = `
+            <div style="text-align:center;padding:2rem;">
+              <div style="font-size:2.5rem;margin-bottom:1rem;">✦</div>
+              <p style="font-family:var(--font-display);font-size:1.6rem;color:var(--cream);margin-bottom:0.75rem;">Prayer Received</p>
+              <p style="font-size:0.95rem;color:var(--text-muted);font-weight:300;line-height:1.8;">
+                Our prayer team is standing with you. God hears every prayer,<br>
+                and we are believing with you for your breakthrough.
+              </p>
+            </div>
+          `;
+        }, 1200);
+      });
+    }
+  </script>
+</body>
+</html>

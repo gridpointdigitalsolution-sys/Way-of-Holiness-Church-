@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Way of Holiness Church — Mind of Christ Ministry. A Spirit-filled community anchored in Scripture, walking in holiness, and transforming lives through the power of God.">
+  <meta name="theme-color" content="#060C1A">
+  <title>The Way of Holiness Church | Mind of Christ Ministry</title>
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+  <link rel="apple-touch-icon" href="images/logo.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader__mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></div>
+    <div class="loader__ring"></div>
+    <p class="loader__wordmark">Way of Holiness</p>
+  </div>
+
+  <!-- Ticker Strip -->
+  <div class="ticker" aria-label="Service times">
+    <div class="ticker__track">
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Sunday Worship: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Wednesday Bible Study: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Friday Prayer Night: [Service Time]</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> "I am the way, the truth, and the life." — John 14:6</span>
+      <span class="ticker__item"><span class="ticker__dot">✦</span> Mind of Christ Ministry • All Are Welcome</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+    <div class="nav__container">
+      <a href="index.html" class="nav__logo" aria-label="Way of Holiness Church — Home">
+        <span class="nav__logo-mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></span>
+        <span class="nav__logo-text">
+          <span class="nav__logo-script">Way of Holiness</span>
+          <span class="nav__logo-sub">Mind of Christ Ministry</span>
+        </span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="index.html"    class="nav__link">Home</a></li>
+        <li><a href="about.html"    class="nav__link">About</a></li>
+        <li><a href="programs.html" class="nav__link">Programs</a></li>
+        <li><a href="contact.html"  class="nav__link">Contact</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="contact.html" class="btn btn--gold-outline" style="padding:0.6rem 1.4rem; font-size:0.72rem;">Plan a Visit</a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <div class="mobile-menu__rays" aria-hidden="true"></div>
+    <ul class="mobile-menu__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--gold">Plan Your Visit</a>
+    <p class="mobile-menu__scripture">"I am the way, the truth, and the life.<br>No one comes to the Father except through me." — John 14:6</p>
+  </div>
+
+  <main>
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="hero" id="home" aria-label="Welcome">
+      <canvas class="hero__canvas" id="heroParticles" aria-hidden="true"></canvas>
+      <div class="hero__rays"   aria-hidden="true"></div>
+      <div class="hero__glow"   aria-hidden="true"></div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <!-- Floating Christian icons -->
+      <div class="hero__icons" aria-hidden="true">
+        <div class="hero__icon hero__icon--cross-1">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2h-4v8H2v4h8v8h4v-8h8v-4h-8z"/></svg>
+        </div>
+        <div class="hero__icon hero__icon--dove-1">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 36c8-2 14-6 18-12 2 6 8 10 16 8-2 8-10 14-20 14-8 0-14-4-14-10z" fill="currentColor" fill-opacity="0.25"/><path d="M28 30c2-3 6-5 10-5"/><circle cx="40" cy="22" r="1.5" fill="currentColor"/></svg>
+        </div>
+        <div class="hero__icon hero__icon--cross-2">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2h-4v8H2v4h8v8h4v-8h8v-4h-8z"/></svg>
+        </div>
+        <div class="hero__icon hero__icon--dove-2">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 36c8-2 14-6 18-12 2 6 8 10 16 8-2 8-10 14-20 14-8 0-14-4-14-10z" fill="currentColor" fill-opacity="0.25"/></svg>
+        </div>
+        <div class="hero__icon hero__icon--leaf">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21c4-12 9-17 18-18-1 9-6 14-18 18z" fill="currentColor" fill-opacity="0.2"/></svg>
+        </div>
+      </div>
+
+      <div class="hero__content">
+
+        <!-- Animated Logo with Halo -->
+        <div class="hero__logo-wrap">
+          <div class="hero__logo-halo"></div>
+          <div class="hero__logo-ring hero__logo-ring--outer"></div>
+          <div class="hero__logo-ring"></div>
+          <img class="hero__logo-img" src="images/logo.jpg" alt="The Way of Holiness Church Crest">
+        </div>
+
+        <div class="hero__pre" data-reveal>
+          <div class="hero__pre-line" aria-hidden="true"></div>
+          <span class="hero__pre-text">Welcome to</span>
+          <div class="hero__pre-line" aria-hidden="true"></div>
+        </div>
+
+        <h1 class="hero__title" data-reveal data-delay="100">
+          <span>The Way of</span>
+          <span class="hero__title-accent">Holiness</span>
+          <span class="hero__title-bold">Church</span>
+        </h1>
+
+        <p class="hero__ministry" data-reveal data-delay="250">Mind of Christ Ministry</p>
+
+        <div class="hero__ctas" data-reveal data-delay="380">
+          <a href="contact.html" class="btn btn--gold">Plan Your Visit</a>
+          <a href="programs.html" class="btn btn--outline">Watch Sermons</a>
+        </div>
+
+        <a href="#about" class="hero__verse hero__verse--btn" data-reveal data-delay="520" aria-label="Scroll to next section">
+          <span class="hero__verse-text">"I am the way, the truth, and the life." &mdash; John 14:6</span>
+          <span class="hero__verse-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </span>
+        </a>
+      </div>
+
+      <a href="#about" class="hero__scroll" aria-label="Scroll to next section">
+        <span class="hero__scroll-text">Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- ── SCRIPTURE BANNER ──────────────────────────────────── -->
+    <section class="scripture-banner" aria-label="Scripture">
+      <div class="scripture-banner__inner">
+        <p class="scripture-banner__text">
+          "And a highway shall be there, and a way, and it shall be called The Way of Holiness; the unclean shall not pass over it..."
+        </p>
+        <span class="scripture-banner__ref">Isaiah 35:8</span>
+      </div>
+    </section>
+
+    <!-- ── ABOUT PREVIEW ─────────────────────────────────────── -->
+    <section class="about-preview section" id="about" aria-label="About us">
+      <div class="container">
+        <div class="about-preview__grid">
+
+          <div class="about-preview__image-side">
+            <div class="about-preview__img-frame" data-reveal="left">
+              <img src="images/church-gathering.jpg" alt="Way of Holiness Church congregation in worship" loading="lazy" onerror="this.style.display='none'">
+              <div class="about-preview__img-placeholder" aria-hidden="true">
+                <div class="about-preview__img-placeholder-cross"></div>
+                <p class="about-preview__img-placeholder-label">[ Insert Congregation Photo ]</p>
+              </div>
+            </div>
+            <div class="about-preview__border-accent" aria-hidden="true"></div>
+            <div class="about-preview__badge" aria-hidden="true">
+              <span class="about-preview__badge-icon">✝</span>
+              <span class="about-preview__badge-word">God's</span>
+              <span class="about-preview__badge-word">House</span>
+            </div>
+          </div>
+
+          <div class="about-preview__text-side">
+            <div data-reveal data-delay="150">
+              <div class="gold-sep">
+                <div class="gold-sep__line"></div>
+                <span class="gold-sep__dot">✦</span>
+              </div>
+              <span class="section-label t-label">Who We Are</span>
+              <h2 class="section-heading" style="margin-bottom:1.5rem;">
+                Two Decades of<br><em>God's Faithfulness</em>
+              </h2>
+              <p class="section-text">
+                Founded by <strong style="color:var(--cream);font-weight:500;">Rev. Dr. Gideon Afolabi</strong> and his wife <strong style="color:var(--cream);font-weight:500;">Pastor Mrs. Oluwatosin Afolabi</strong>, The Way of Holiness Church &mdash; Mind of Christ Ministry has stood for over <strong style="color:var(--gold-primary);font-weight:500;">20 years</strong> as a covenant family bound by faith and stirred by the fire of the Holy Spirit. From a small gathering of hungry believers, the house has grown into a multi-branch ministry serving Christ across <strong style="color:var(--cream);font-weight:500;">Nigeria and the United States</strong>.
+              </p>
+              <p class="section-text">
+                Born from one man's burning passion for the Person of Christ and the unfiltered Word of God, this house exists to give back to the public the original Gospel &mdash; uncompromised, undiluted, unashamed. Whoever walks through our doors finds room at the table. Saint or seeker. Broken or breakthrough. You belong here.
+              </p>
+              <a href="about.html" class="btn btn--gold-outline">Discover Our Story</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── SERVICE TIMES ─────────────────────────────────────── -->
+    <section class="services section section--dark" id="services" aria-label="Service times">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="gold-sep" style="justify-content:center;">
+            <div class="gold-sep__line"></div>
+            <span class="gold-sep__dot">✦</span>
+            <div class="gold-sep__line" style="transform:scaleX(-1);"></div>
+          </div>
+          <span class="section-label t-label">Join Us in Worship</span>
+          <h2 class="section-heading">Weekly Gatherings</h2>
+        </div>
+        <div class="services__grid">
+          <article class="service-card" data-reveal data-delay="0">
+            <span class="service-card__icon" aria-hidden="true">☀</span>
+            <p class="service-card__day">Every Sunday</p>
+            <h3 class="service-card__title">Sunday Worship Service</h3>
+            <p class="service-card__time">[Insert Service Time]</p>
+            <p class="service-card__desc">Our main gathering — Spirit-led praise, the unfiltered Word of God, and a community that will feel like family from your very first visit.</p>
+          </article>
+          <article class="service-card service-card--featured" data-reveal data-delay="130">
+            <span class="service-card__icon" aria-hidden="true">📖</span>
+            <p class="service-card__day">Every Wednesday</p>
+            <h3 class="service-card__title">Bible Study &amp; Teaching</h3>
+            <p class="service-card__time">[Insert Service Time]</p>
+            <p class="service-card__desc">A midweek deep-dive into Scripture. Verse-by-verse, Spirit-illumined teaching that will sharpen your walk and renew your mind.</p>
+          </article>
+          <article class="service-card" data-reveal data-delay="260">
+            <span class="service-card__icon" aria-hidden="true">🕊</span>
+            <p class="service-card__day">Every Friday</p>
+            <h3 class="service-card__title">Prayer &amp; Intercession Night</h3>
+            <p class="service-card__time">[Insert Service Time]</p>
+            <p class="service-card__desc">Corporate prayer in the power of the Holy Spirit. Where chains break, the impossible bows, and heaven invades earth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FOUNDERS PREVIEW ──────────────────────────────────── -->
+    <section class="founders section" aria-label="Our founders">
+      <div class="container founders__inner">
+        <div class="section-header" data-reveal>
+          <div class="gold-sep" style="justify-content:center;">
+            <div class="gold-sep__line"></div>
+            <span class="gold-sep__dot">✦</span>
+            <div class="gold-sep__line" style="transform:scaleX(-1);"></div>
+          </div>
+          <span class="section-label t-label">Meet The Founders</span>
+          <h2 class="section-heading">A Calling. A Covenant.<br><em>A Couple.</em></h2>
+          <p style="color:var(--text-muted);font-size:1rem;font-weight:300;margin-top:1rem;max-width:55ch;margin-left:auto;margin-right:auto;">
+            Set apart by God for this generation — leading not from a stage, but from the secret place of prayer.
+          </p>
+        </div>
+
+        <div class="founders__pair">
+
+          <div class="founder-portrait" data-reveal="left">
+            <div class="founder-portrait__frame">
+              <span class="founder-portrait__corner founder-portrait__corner--tl"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--tr"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--bl"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--br"></span>
+              <img src="images/founder.jpg" alt="Rev. Dr. Gideon Afolabi — Senior Pastor &amp; Founder" loading="lazy">
+              <div class="founder-portrait__caption">
+                <p class="founder-portrait__role">Senior Pastor &amp; Founder</p>
+                <h3 class="founder-portrait__name">Rev. Dr. Gideon Afolabi</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="founder-portrait" data-reveal="right" data-delay="150">
+            <div class="founder-portrait__frame">
+              <span class="founder-portrait__corner founder-portrait__corner--tl"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--tr"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--bl"></span>
+              <span class="founder-portrait__corner founder-portrait__corner--br"></span>
+              <img src="images/first-lady.png" alt="Pastor Mrs. Oluwatosin Afolabi — First Lady &amp; Co-Founder" loading="lazy">
+              <div class="founder-portrait__caption">
+                <p class="founder-portrait__role">First Lady &amp; Co-Founder</p>
+                <h3 class="founder-portrait__name">Pastor Mrs. Oluwatosin Afolabi</h3>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;" data-reveal>
+          <a href="about.html#founders" class="btn btn--gold-outline">Read Their Story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── STATS ──────────────────────────────────────────────── -->
+    <section class="stats" aria-label="Church impact">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stat" data-counter="1000" data-suffix="+" data-reveal data-delay="0">
+            <div class="stat__num-wrap">
+              <span class="stat__number">0</span>
+              <span class="stat__suffix">+</span>
+            </div>
+            <p class="stat__label">Members &amp; Growing</p>
+          </div>
+          <div class="stat" data-counter="7" data-suffix="" data-reveal data-delay="120">
+            <div class="stat__num-wrap">
+              <span class="stat__number">0</span>
+            </div>
+            <p class="stat__label">Active Departments</p>
+          </div>
+          <div class="stat" data-counter="52" data-suffix="" data-reveal data-delay="240">
+            <div class="stat__num-wrap">
+              <span class="stat__number">0</span>
+            </div>
+            <p class="stat__label">Weeks of Worship Yearly</p>
+          </div>
+          <div class="stat" data-counter="500" data-suffix="+" data-reveal data-delay="360">
+            <div class="stat__num-wrap">
+              <span class="stat__number">0</span>
+              <span class="stat__suffix">+</span>
+            </div>
+            <p class="stat__label">Lives Transformed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── LATEST VIDEOS / SERMONS ──────────────────────────── -->
+    <section class="videos section" id="videos" aria-label="Latest sermons and programs">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <div class="gold-sep" style="justify-content:center;">
+            <div class="gold-sep__line"></div>
+            <span class="gold-sep__dot">✦</span>
+            <div class="gold-sep__line" style="transform:scaleX(-1);"></div>
+          </div>
+          <span class="section-label t-label">From The Pulpit</span>
+          <h2 class="section-heading">Latest Sermons &amp; Programs</h2>
+          <p style="color:var(--text-muted);font-size:1rem;font-weight:300;margin-top:1rem;max-width:55ch;margin-left:auto;margin-right:auto;">
+            Watch our most recent messages and ministry programs. Be filled. Be challenged. Be changed.
+          </p>
+        </div>
+
+        <div class="videos__grid">
+          <div class="video-tile" data-reveal data-youtube="[YOUTUBE_VIDEO_ID_1]">
+            <div class="video-tile__placeholder">
+              <span class="video-tile__placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <p class="video-tile__placeholder-text">[ Paste YouTube URL in main.js or replace ID ]</p>
+            </div>
+            <div class="video-tile__caption">
+              <span class="video-tile__caption-label">Sunday Service</span>
+              <p class="video-tile__caption-title">[Sermon Title 1]</p>
+            </div>
+          </div>
+          <div class="video-tile" data-reveal data-delay="150" data-youtube="[YOUTUBE_VIDEO_ID_2]">
+            <div class="video-tile__placeholder">
+              <span class="video-tile__placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+              <p class="video-tile__placeholder-text">[ Paste YouTube URL in main.js or replace ID ]</p>
+            </div>
+            <div class="video-tile__caption">
+              <span class="video-tile__caption-label">Bible Study</span>
+              <p class="video-tile__caption-title">[Sermon Title 2]</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;" data-reveal>
+          <a href="programs.html#videos" class="btn btn--gold">See All Programs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+    <section class="testimonials section section--dark" id="testimonials" aria-label="Member testimonies">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="section-label t-label">What God is Doing</span>
+          <h2 class="section-heading">Testimonies of Grace</h2>
+        </div>
+        <div class="testimonials__wrap" data-reveal data-delay="150">
+          <div class="testimonial active" role="group" aria-label="Testimony 1 of 3">
+            <div class="testimonial__marks" aria-hidden="true">&ldquo;</div>
+            <blockquote class="testimonial__quote">
+              I came in carrying weight I could no longer name — only knowing I needed God. The Word preached here cut through every excuse, and the love of this family carried me until I could stand. I am not the same person I was. I never will be.
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="testimonial__name">[ Member Name ]</p>
+                <p class="testimonial__role">Member &bull; [ Years ]</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial" role="group" aria-label="Testimony 2 of 3">
+            <div class="testimonial__marks" aria-hidden="true">&ldquo;</div>
+            <blockquote class="testimonial__quote">
+              The teaching here taught me how to think — not just what to believe. The Mind of Christ message reordered my marriage, my work, my prayer life. Everything. This is not religion. This is life.
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="testimonial__name">[ Member Name ]</p>
+                <p class="testimonial__role">Member &bull; [ Years ]</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial" role="group" aria-label="Testimony 3 of 3">
+            <div class="testimonial__marks" aria-hidden="true">&ldquo;</div>
+            <blockquote class="testimonial__quote">
+              I walked in a stranger and walked out with a family. Friday Prayer Night changed how I see the unseen. God has answered things in my life I had stopped believing He still answered.
+            </blockquote>
+            <div class="testimonial__author">
+              <div class="testimonial__avatar" aria-hidden="true"></div>
+              <div>
+                <p class="testimonial__name">[ Member Name ]</p>
+                <p class="testimonial__role">Ministry Leader &bull; [ Years ]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials__dots" role="tablist" aria-label="Testimonial navigation">
+          <button class="testimonials__dot active" data-index="0" role="tab" aria-selected="true"  aria-label="Testimony 1"></button>
+          <button class="testimonials__dot"        data-index="1" role="tab" aria-selected="false" aria-label="Testimony 2"></button>
+          <button class="testimonials__dot"        data-index="2" role="tab" aria-selected="false" aria-label="Testimony 3"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA BANNER ────────────────────────────────────────── -->
+    <section class="cta-banner" aria-label="Call to action">
+      <div class="cta-banner__rays" aria-hidden="true"></div>
+      <div class="container">
+        <div class="cta-banner__content" data-reveal>
+          <div class="gold-sep" style="justify-content:center;margin-bottom:1.5rem;">
+            <div class="gold-sep__line"></div>
+            <span class="gold-sep__dot">✦</span>
+            <div class="gold-sep__line" style="transform:scaleX(-1);"></div>
+          </div>
+          <span class="section-label t-label" style="display:block;margin-bottom:1.2rem;">Your Journey Starts Here</span>
+          <h2 class="cta-banner__heading">Come As You Are.<br><em>Leave Transformed.</em></h2>
+          <p class="cta-banner__text">
+            Whether you're searching, hurting, hungry, or already on fire — there is a seat for you on Sunday. Step in. The God who called you is already waiting.
+          </p>
+          <div class="cta-banner__btns">
+            <a href="contact.html" class="btn btn--gold">Plan Your Visit</a>
+            <a href="contact.html#location" class="btn btn--outline">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__logo-row">
+            <span class="footer__logo-mark"><img src="images/logo.jpg" alt="Way of Holiness Church"></span>
+            <div>
+              <p class="footer__logo-script">Way of Holiness</p>
+              <p class="footer__logo-sub">Mind of Christ Ministry</p>
+            </div>
+          </div>
+          <p class="footer__tagline">Walking in holiness. Thinking with the mind of Christ. Transforming lives and nations through the unstoppable power of the Gospel.</p>
+          <nav class="footer__social" aria-label="Social media">
+            <a href="[FACEBOOK_URL]" class="footer__social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="[YOUTUBE_URL]" class="footer__social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--navy-void)"/></svg>
+            </a>
+            <a href="[INSTAGRAM_URL]" class="footer__social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="[WHATSAPP_URL]" class="footer__social-link" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            </a>
+          </nav>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="programs.html">Programs</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#give">Give Online</a></li>
+            <li><a href="programs.html#videos">Sermon Archive</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Service Schedule</h4>
+          <div class="footer__time-row">
+            <span class="footer__time-day">Sunday</span>
+            <span class="footer__time-val">[Service Time]</span>
+          </div>
+          <div class="footer__time-row">
+            <span class="footer__time-day">Wednesday</span>
+            <span class="footer__time-val">[Service Time]</span>
+          </div>
+          <div class="footer__time-row">
+            <span class="footer__time-day">Friday</span>
+            <span class="footer__time-val">[Service Time]</span>
+          </div>
+          <div style="margin-top:1.5rem;">
+            <a href="contact.html" class="btn btn--gold-outline" style="padding:0.6rem 1.2rem;font-size:0.72rem;">Plan a Visit</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Contact Us</h4>
+          <div style="display:flex;flex-direction:column;gap:1rem;">
+            <div class="footer__contact-item">
+              <span class="footer__contact-icon">📍</span>
+              <span>[Church Address]<br>[City, State / Country]</span>
+            </div>
+            <div class="footer__contact-item">
+              <span class="footer__contact-icon">📞</span>
+              <span>[Phone Number]</span>
+            </div>
+            <div class="footer__contact-item">
+              <span class="footer__contact-icon">✉</span>
+              <span>[Email Address]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2026 The Way of Holiness Church &mdash; Mind of Christ Ministry. All rights reserved.</p>
+        <p class="footer__bottom-verse">"The fear of the Lord is the beginning of wisdom." &mdash; Proverbs 9:10</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">&#8593;</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
