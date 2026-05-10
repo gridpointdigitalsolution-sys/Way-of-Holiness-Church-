@@ -499,6 +499,15 @@ document.querySelectorAll('[data-counter]').forEach(stat => {
   }, { passive: true });
 })();
 
+/* ── Inject hover view icon into gallery tiles ─────────────── */
+document.querySelectorAll('.gallery-tile').forEach(t => {
+  if (t.querySelector('.gallery-tile__icon')) return;
+  const icon = document.createElement('span');
+  icon.className = 'gallery-tile__icon';
+  icon.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M21 3l-7 7"/><path d="M9 21H3v-6"/><path d="M3 21l7-7"/></svg>';
+  t.appendChild(icon);
+});
+
 /* ── Lightbox for Gallery ──────────────────────────────────── */
 (function () {
   const box = document.getElementById('lightbox');
