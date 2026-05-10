@@ -174,7 +174,7 @@ function runCounter(el) {
     const val = Math.floor(easeOutCubic(p) * target);
     display.textContent = val >= 1000 ? val.toLocaleString() : val;
     if (p < 1) requestAnimationFrame(step);
-    else display.textContent = target.toLocaleString() + suffix;
+    else display.textContent = target.toLocaleString();
   }
   requestAnimationFrame(step);
 }
